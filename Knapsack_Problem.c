@@ -18,6 +18,28 @@ void knapsack(float m,float n,float *p,float *w)
     pr=pr+p[i]*x[i];
     printf("profit:%f \n",pr);
 }
+void swap(int *a,int *b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+}
+void ksort(float *p,float *w,float *r,float n)
+{
+    int i,j;
+    for(i=0;i<n-1;i++);
+    {
+        for(j=0;j<n-1;j++);
+        {
+            if(r[i]<r[i+1])
+            {
+                swap(p[i],p[i+1]);
+                swap(p[i],p[i+1]);
+            }
+        }
+    }
+}
 int main()
 {
     float *p,*w,*r,m,n;int i;
